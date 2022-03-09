@@ -1,0 +1,23 @@
+   // post  request
+    const asyncPostCall = async () => {
+        await fetch('https://bootcamp-2022.devtest.ge/api/application',
+            {
+            method : 'POST',
+            headers: {
+               'Content-Type': 'application/json',
+               'Accept' : 'application/json',
+               },
+            body: JSON.stringify(),
+        })
+        .then(response => response)
+        .then(data => console.log(data))
+    }
+    asyncPostCall();
+    
+    const getData = () => {
+        axios.get('https://bootcamp-2022.devtest.ge/api/applications?token=21af9e1d-2eae-45ae-8264-2189ca22a824')
+            .then(response => response)
+    
+            
+    }
+    getData();
