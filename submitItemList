@@ -1,0 +1,121 @@
+/* /// submited aplication page // */
+.submitted-applications {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+.submitted-applications>svg {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    display: fixed;
+}
+.add-application {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.submitted-applications h2 {
+    color: white;
+    width: 100%;
+    padding: 3rem;
+
+}
+.application-display {
+    width: 50rem;
+    height: 2.5rem;
+    background-color: #fd4f34;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: 1.1rem;
+    z-index: 1;
+}
+.application-display svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    fill: white;
+    transform: rotate(90deg);
+    transition: 0.3s;
+}
+.application-display span {
+    margin-left: 1rem;
+}
+.submitted-application-form {
+    width: 50rem;
+    background-color: #fff;
+    margin-bottom: 5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    /* height: 0; */
+    overflow: hidden;
+    transform: translateY(-100%);
+    transition: 0.5s;
+    display: flex;
+}
+.app-container-width {
+    /* width: 50%; */
+    margin-bottom: 4rem;
+}
+.app-container-width div {
+    width: 50%;
+    margin: .3rem auto; 
+}
+.app-container-width  p {
+    font-size: 0.9rem;
+    padding: 50px 0 15px 80px;
+}
+.app-container-width span {
+    font-size: .8rem;
+}
+.submitted-infomation-conatiner {
+    /* width: 50%; */
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    font-size: .9rem;
+}
+.date-form {
+    width: 25rem;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 7px;
+}
+.date-form svg {
+    fill: #FE3B1F;
+}
+h4 {
+    color: #FE3B1F;
+    text-decoration: underline;
+    padding: 40px 80px;
+}
+
+.sides {
+    display: flex;
+    flex-direction: column;
+} 
+.sides span {
+    margin-top: 1rem;
+    text-transform: none;
+}
+.app-container-width .skillset {
+    width: 20rem;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
