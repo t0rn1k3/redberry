@@ -45,3 +45,66 @@ goBack.addEventListener('click', ()=> {
     moveToPrev();
     
 })
+
+
+function update() {
+    // personal info form validation //
+
+    const minCharacter = 2;
+    const GeoNumber = '+9955';
+    const emailFormat = /^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\. [a-zA-Z0-9-]+)*$/
+
+
+    // check if form first name last name email and phone is valid
+    if (firstName.value.length < minCharacter ) {
+        textError.innerHTML = "Please enter at least two characters.<br>";
+        slidePosition = -1;
+        progress.style.width = 0;
+        prev.disabled = true;
+        currentActive = 1;
+    }else if (lastName.value.length < minCharacter) {
+        textError.innerHTML = "Please enter at least two characters.<br>";
+        slidePosition = -1;
+        progress.style.width = 0;
+        currentActive = 1;
+    }else if (email.value.length === 0){
+        textError.innerHTML = "please enter valid email address!<br>";
+        slidePosition = -1;
+        progress.style.width = 0;
+        currentActive = 1;
+    }else if(!tel.value.includes(GeoNumber)) {
+        textError.innerHTML = "enter phone with georgian format<br>";
+        slidePosition = -1;
+        progress.style.width = 0;
+        currentActive = 1;
+    }else {
+        circles.forEach((circle, idx) => {
+            if (idx < currentActive) {
+                circle.classList.add('active');
+            }else {
+                circle.classList.remove('active');
+            }
+        });
+    }
+       
+    
+
+    const active = document.querySelectorAll('.active');
+
+    progress.style.width = (active.length -1)  / (circles.length - 1) * 100 + '%';
+
+
+    // manage next and previous button's status
+
+    if (currentActive === 1) {
+        prev.disabled = true;
+    }else if(currentActive === circles.length) {
+        pageProgress.style.display = 'none';
+    }else {
+        prev.disabled = false; 
+        next.disabled = false;
+    }
+}
+
+
+
