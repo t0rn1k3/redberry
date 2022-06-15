@@ -15,6 +15,7 @@
     background-color: black;
     overflow: hidden;
     width: 100%;
+    height: 1500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,6 +28,7 @@
     display: fixed;
 }
 .add-application {
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,9 +70,6 @@
     margin-bottom: 5rem;
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
-    /* height: 0; */
-    overflow: hidden;
-    transform: translateY(-100%);
     transition: 0.5s;
     display: flex;
 }
@@ -303,14 +302,11 @@ select {
     padding: 10px;
     margin-top: 2rem;
 }
-.skill-exper svg {
+.svg-span {
     cursor: pointer;
     fill: #FE3B1F;
 }
-.skill-exper div {
-    display: flex;
-    justify-content: space-between;
-}
+
 
 /* // covid stuff  */
 
